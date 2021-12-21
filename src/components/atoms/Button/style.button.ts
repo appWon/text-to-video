@@ -5,8 +5,9 @@ export const ButtonContainer = styled.button<{
     background?: string
     disabled?: boolean
 }>`
-    width: 320px;
+    width: 100%;
     height: 50px;
+    max-width: 320px;
     font-size: 1rem;
     border: none;
     cursor: pointer;
