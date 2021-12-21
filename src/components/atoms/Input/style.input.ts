@@ -7,7 +7,6 @@ export const InputContainer = styled.label`
     width: 100%;
     height: 50px;
     max-width: 320px;
-    border-radius: 8px;
     background-color: #333;
 `
 export const Input = styled.input`

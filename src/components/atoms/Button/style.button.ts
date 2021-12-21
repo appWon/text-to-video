@@ -9,7 +9,6 @@ export const ButtonContainer = styled.button<{
     height: 50px;
     font-size: 1rem;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
     color: ${({ color }) => (color ? color : '#fff')};
 
