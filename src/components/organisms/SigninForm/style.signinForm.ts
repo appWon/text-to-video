@@ -7,7 +7,7 @@ export const SigninFormContainer = styled.section`
     flex-direction: column;
     justify-content: space-between;
     width: 320px;
-    height: 220px;
+    height: 290px;
 `
 
 export const InputText = styled(Input)`
