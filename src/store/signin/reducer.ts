@@ -5,6 +5,7 @@ const initalSigninState: SigninState = {
         id: '',
         password: '',
     },
+    step: 1,
 }
 
 export const signinReducer = (state = initalSigninState, action: signinAction): SigninState => {
@@ -13,6 +14,11 @@ export const signinReducer = (state = initalSigninState, action: signinAction): 
             return {
                 ...state,
                 loginData: action.signinData,
+            }
+        case 'UPDATE_STEP':
+            return {
+                ...state,
+                step: action.step,
             }
         default:
             return state

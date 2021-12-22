@@ -9,16 +9,22 @@ export const SigninTemplateContainer = styled.div`
     height: 100vh;
 `
 
-export const SigninForm = styled.div`
+export const AuthWapper = styled.div`
     position: relative;
-    display: flex;
+    width: 440px;
+    height: 620px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #111111e6;
+`
+
+export const LoginWapper = styled.section<{ isStep: number }>`
+    display: ${({ isStep }) => (isStep === 1 ? 'flex' : 'none')};
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 440px;
-    height: 620px;
-    border-radius: 8px;
-    background-color: #111111e6;
+    width: 100%;
+    height: 100%;
 `
 
 export const SigninHeader = styled.h1`
@@ -47,4 +53,74 @@ export const SignupRecommend = styled.div`
 `
 export const SignupButton = styled(Button)`
     border-radius: 8px;
+`
+
+export const SignupSelectWapper = styled.section<{ isStep: number }>`
+    display: ${({ isStep }) => (isStep === 2 ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`
+
+export const SignupSelectHeader = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 320px;
+`
+
+export const SignupSelectTitle = styled.h1`
+    font-size: 2rem;
+    color: #fff;
+`
+
+export const SignupSelectRecommend = styled.span`
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-left: auto;
+`
+
+export const PrevIcon = styled.div`
+    width: 28px;
+    height: 100%;
+    margin-right: 10px;
+    background-size: 28px 28px;
+    background-image: url('https://ttv.waynehills.co/assets/i_back_w.png');
+    cursor: pointer;
+`
+
+export const PersonalSignupWapper = styled.section<{ isStep: number }>`
+    display: ${({ isStep }) => (isStep === 3 ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`
+
+export const PersonalRecommend = styled.span`
+    color: #fff;
+    font-size: 1rem;
+    margin-left: auto;
+`
+
+export const PersonalDetailWapper = styled.section<{ isStep: number }>`
+    display: ${({ isStep }) => (isStep === 4 ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`
+
+export const completedSignupWapper = styled.section<{ isStep: number }>`
+    display: ${({ isStep }) => (isStep === 5 ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 `

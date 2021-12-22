@@ -1,5 +1,6 @@
 export interface SigninState {
     loginData: LoginData
+    step: number
 }
 
 export interface LoginData {
@@ -10,4 +11,6 @@ export interface LoginData {
 export const updateSigninData = (signinData: LoginData) =>
     ({ type: 'UPDATE_SIGN_DATA', signinData } as const)
 
-export type signinAction = ReturnType<typeof updateSigninData>
+export const updateStep = (step: number) => ({ type: 'UPDATE_STEP', step } as const)
+
+export type signinAction = ReturnType<typeof updateSigninData> | ReturnType<typeof updateStep>
