@@ -22,6 +22,7 @@ export const CheckBoxIcon = styled.div<{
 `
 
 export const CheckBoxValue = styled.div`
+    color: #fff;
     font-size: 0.8rem;
     padding-left: 8px;
 `
