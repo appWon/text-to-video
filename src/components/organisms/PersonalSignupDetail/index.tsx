@@ -3,12 +3,9 @@ import React from 'react'
 import * as S from './style.personalSignupDetail'
 import { CheckCips } from '../../molecules/CheckCips'
 import { CheckBox } from '../../atoms/CheckBox'
+import { useAuthStep } from '../../../hook/useAuthStep'
 
-interface PersonalSignupDetailProps {
-    onClick?: () => void
-}
-
-export const PersonalSignupDetail: React.FC<PersonalSignupDetailProps> = props => {
+export const PersonalSignupDetail: React.FC = () => {
     const [userPassword, setPassword] = React.useState({
         password: '',
         checkPassword: '',
@@ -19,6 +16,11 @@ export const PersonalSignupDetail: React.FC<PersonalSignupDetailProps> = props =
     })
     const [isChkecked, setIsChecked] = React.useState(false)
     const [completed, setCompleted] = React.useState(false)
+    const { step, setStep } = useAuthStep()
+
+    function handleNextClick() {
+        setStep(step + 1)
+    }
 
     function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
         const { id, value } = e.target
@@ -93,7 +95,7 @@ export const PersonalSignupDetail: React.FC<PersonalSignupDetailProps> = props =
                     TTV A.I 이용약관에 모두 동의합니다.
                 </CheckBox>
             </S.AgreementWapper>
-            <S.SignupButton disabled={!completed} background="#650aa8" onClick={props.onClick}>
+            <S.SignupButton disabled={!completed} background="#650aa8" onClick={handleNextClick}>
                 가입완료
             </S.SignupButton>
         </S.PersonalSignupDetailContainer>

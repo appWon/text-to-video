@@ -3,10 +3,16 @@ import React from 'react'
 import * as S from './style.personalSignup'
 import { SnsSignupButton } from '../../molecules/SnsSignupButton'
 import { InputUserCheck } from '../../molecules/InputUserCheck'
+import { useAuthStep } from '../../../hook/useAuthStep'
 
 export const PersonalSignup: React.FC = () => {
     const [userId, setUserId] = React.useState('')
     const [duplicate, setDuplicate] = React.useState(true)
+    const { step, setStep } = useAuthStep()
+
+    function handleNextClick() {
+        setStep(step + 1)
+    }
 
     return (
         <S.PersonalSignupContainer>
@@ -26,7 +32,11 @@ export const PersonalSignup: React.FC = () => {
                     *가입완료 후 이메일에서 본인인증을 완료해야 서비스를 이용하실 수 있습니다.
                 </S.SignupRecommend>
             </S.NomalSignupWapper>
-            <S.SignupNextButton disabled={duplicate} background={'#650aa8'}>
+            <S.SignupNextButton
+                disabled={duplicate}
+                background={'#650aa8'}
+                onClick={handleNextClick}
+            >
                 다음
             </S.SignupNextButton>
         </S.PersonalSignupContainer>
