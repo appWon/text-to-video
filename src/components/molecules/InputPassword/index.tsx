@@ -7,11 +7,12 @@ import { Button } from '../../atoms/Button'
 interface InputPasswordProps {
     id?: string
     value: string
+    className?: string
     onChange: (arg: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export const InputPassword: React.FC<InputPasswordProps> = props => {
-    const { id, value, onChange } = props
+    const { id, value, className, onChange } = props
 
     const [isShow, setIsShow] = React.useState(true)
 
@@ -20,7 +21,7 @@ export const InputPassword: React.FC<InputPasswordProps> = props => {
     }
 
     return (
-        <S.InputPasswordContainer>
+        <S.InputPasswordContainer className={className}>
             <Input
                 id={id}
                 type={isShow ? 'password' : 'text'}
