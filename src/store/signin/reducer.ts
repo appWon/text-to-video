@@ -14,5 +14,7 @@ export const signinReducer = (state = initalSigninState, action: signinAction): 
                 ...state,
                 loginData: action.signinData,
             }
+        default:
+            return state
     }
 }
