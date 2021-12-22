@@ -8,6 +8,7 @@ export const MakeVideoButtonContainer = styled.div`
     border-radius: 16px;
     background-color: #111;
     cursor: pointer;
+    z-index: 10;
 `
 
 export const MakeVideoImage = styled.img.attrs({
