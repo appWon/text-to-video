@@ -124,3 +124,14 @@ export const completedSignupWapper = styled.section<{ isStep: number }>`
     width: 100%;
     height: 100%;
 `
+
+export const SigninLogo = styled.img.attrs({
+    src: 'https://ttv.waynehills.co/assets/i_logo_w_nomal.png',
+})`
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px;
+    width: 220px;
+    height: 100px;
+`

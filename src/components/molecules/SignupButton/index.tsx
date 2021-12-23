@@ -4,10 +4,9 @@ import * as S from './style.signupButton'
 
 interface SignupButtonProps {
     url: string
+    onClick?: () => void
 }
 
 export const SignupButton: React.FC<SignupButtonProps> = props => {
-    const { url, children } = props
-
-    return <S.SignupButtonContainer url={url}>{children}</S.SignupButtonContainer>
+    return <S.SignupButtonContainer {...props} />
 }

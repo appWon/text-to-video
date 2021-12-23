@@ -10,16 +10,25 @@ import { PersonalSignup } from '../../organisms/PersonalSignup'
 import { PersonalSignupDetail } from '../../organisms/PersonalSignupDetail'
 import { CompletedForm } from '../../organisms/CompletedForm'
 import { useAuthStep } from '../../../hook/useAuthStep'
+import { VideoBackground } from '../../molecules/VideoBackground'
+import { HomeFooter } from '../../organisms/HomeFooter'
 
 export const SigninTemplate: React.FC = () => {
     const { step, setStep } = useAuthStep()
 
     function handlePrevClick() {
+        setStep(step - 1)
+    }
+
+    function handleSignupClick() {
         setStep(step + 1)
     }
 
     return (
         <S.SigninTemplateContainer>
+            <VideoBackground />
+            <HomeFooter />
+            <S.SigninLogo />
             <S.AuthWapper>
                 <ProgressBar currentStep={step} />
                 <CloseIcon />
@@ -29,7 +38,7 @@ export const SigninTemplate: React.FC = () => {
                     <SnsLoginForm />
                     <S.SignupWapper>
                         <S.SignupRecommend>회원가입하고 영상을 제작해보세요!</S.SignupRecommend>
-                        <S.SignupButton onClick={handlePrevClick}>회원가입</S.SignupButton>
+                        <S.SignupButton onClick={handleSignupClick}>회원가입</S.SignupButton>
                     </S.SignupWapper>
                 </S.LoginWapper>
                 <S.SignupSelectWapper isStep={step}>

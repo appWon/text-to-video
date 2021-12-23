@@ -8,18 +8,6 @@ export const HomeTemplateContainer = styled.div`
     height: 100vh;
 `
 
-export const VideoBackground = styled.video.attrs({
-    src: 'https://ttv.waynehills.co/assets/bg.mp4',
-    muted: true,
-    autoPlay: true,
-    loop: true,
-})`
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-`
 export const MainLogoWapper = styled.div`
     display: flex;
     flex-direction: column;

@@ -13,8 +13,11 @@ export const SignupSelectUser: React.FC = () => {
 
     return (
         <S.SignupSelectUserContainer>
-            <SignupButton url={'https://ttv.waynehills.co/assets/i_signup_personal.png'}>
-                <S.ButtonTextWapper onClick={handleNextClick}>
+            <SignupButton
+                onClick={handleNextClick}
+                url={'https://ttv.waynehills.co/assets/i_signup_personal.png'}
+            >
+                <S.ButtonTextWapper>
                     <S.ButtonTitle>개인회원</S.ButtonTitle>
                     <S.ButtonNotice>자신만의 영상을 만들고 싶은 개인회원</S.ButtonNotice>
                 </S.ButtonTextWapper>
