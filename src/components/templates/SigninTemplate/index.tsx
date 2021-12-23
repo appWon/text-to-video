@@ -10,6 +10,8 @@ import { PersonalSignup } from '../../organisms/PersonalSignup'
 import { PersonalSignupDetail } from '../../organisms/PersonalSignupDetail'
 import { CompletedForm } from '../../organisms/CompletedForm'
 import { useAuthStep } from '../../../hook/useAuthStep'
+import { VideoBackground } from '../../molecules/VideoBackground'
+import { HomeFooter } from '../../organisms/HomeFooter'
 
 export const SigninTemplate: React.FC = () => {
     const { step, setStep } = useAuthStep()
@@ -20,6 +22,9 @@ export const SigninTemplate: React.FC = () => {
 
     return (
         <S.SigninTemplateContainer>
+            <VideoBackground />
+            <HomeFooter />
+            <S.SigninLogo />
             <S.AuthWapper>
                 <ProgressBar currentStep={step} />
                 <CloseIcon />
