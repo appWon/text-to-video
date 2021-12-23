@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { GlobalStyle } from '../styles'
 import { Signin } from '../pages/Signin'
 import { Home } from '../pages/Home'
+import { TTV } from '../pages/TTV'
 import { store } from '../store'
 
 export const Routers = () => {
@@ -15,6 +16,7 @@ export const Routers = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="signin" element={<Signin />} />
+                    <Route path="ttv" element={<TTV />} />
                 </Routes>
             </BrowserRouter>
         </Provider>

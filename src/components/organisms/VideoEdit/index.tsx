@@ -1,8 +1,11 @@
 import React from 'react'
 
 import * as S from './style.videoEdit'
+import { useTTVtextData } from '../../../hook/useTTVtextData'
 
 export const VideoEdit: React.FC = () => {
+    const { inputText } = useTTVtextData()
+
     return (
         <S.VideoEditContainer>
             <S.AiVideoTimelineWrapper>
@@ -18,7 +21,7 @@ export const VideoEdit: React.FC = () => {
                 <S.VideoEditTitle>A.I 영상 편집</S.VideoEditTitle>
             </S.VideoEditHeader>
             <S.VideoEditTextWrapper>
-                <S.VideoEditTextArea />
+                <S.VideoEditTextArea value={inputText} />
             </S.VideoEditTextWrapper>
             <S.KeywordSelectWrapper>
                 <S.VideoEditTitle>키워드 선택</S.VideoEditTitle>
