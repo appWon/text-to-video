@@ -11,4 +11,4 @@
 - Storybook v6.4.9
 - eslint v8.5
 - Prettier v2.5.1
-
+- react-step-progress-bar v1.0
