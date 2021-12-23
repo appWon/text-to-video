@@ -25,4 +25,9 @@ export const NextButton = styled.button`
     border-radius: 8px;
     background-color: #650aa8;
     cursor: pointer;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
 `

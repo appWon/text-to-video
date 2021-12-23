@@ -26,7 +26,16 @@ export const TTVHeader: React.FC<TTVHeaderProps> = props => {
             <S.TTVtitle>{props.title}</S.TTVtitle>
             <S.EventWapper>
                 <UserInfo />
-                <S.NextButton onClick={handleNextButton}>다음</S.NextButton>
+                {step < 3 ? (
+                    <S.NextButton onClick={handleNextButton}>다음</S.NextButton>
+                ) : (
+                    <S.NextButton onClick={handleNextButton}>
+                        <img
+                            src="https://ttv.waynehills.co/assets/image/ttv-encoding/i-download-w.png"
+                            alt="다운로드 이미지"
+                        />
+                    </S.NextButton>
+                )}
             </S.EventWapper>
         </S.TTVHeaderContainer>
     )
